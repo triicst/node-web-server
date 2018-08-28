@@ -42,7 +42,12 @@ app.get('/about',(req,res) =>{
         content:'Welcome to about page',
     });
 });
-
+app.get('/project',(req,res) =>{
+    res.render('project.hbs',{
+        papeTitle:'Project',
+        content:'Welcome to project page'
+    });
+})
 app.get('/bad',(req,res) =>{
    res.send({
        errorMessage:'Page not found'
